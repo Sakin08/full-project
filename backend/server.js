@@ -3,15 +3,16 @@ import cors from 'cors';
 import 'dotenv/config';
 import connectDB from './config/mongodb.js'; // Add `.js` if using ES modules
 import connectCloudinary from './config/cloudinary.js';
-import adminRouter from './routes/doctorRoute.js';
+import adminRouter from './routes/adminRoute.js';
 // Connect to MongoDB
-connectDB()
-connectCloudinary()
+
 
 // App config
 const app = express();
 const port = process.env.PORT || 4000;
 
+connectDB()
+connectCloudinary()
 // Middleware
 app.use(express.json());
 app.use(cors());

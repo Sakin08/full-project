@@ -19,6 +19,6 @@ const userSchema = new mongoose.Schema(
 
 // Use a safe check to avoid redefining the model
 const userModel =
-  mongoose.model.user || mongoose.model("User", userSchema);
+  mongoose.models.user || mongoose.model("User", userSchema);
 
 export default userModel;
