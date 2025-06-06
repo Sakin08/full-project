@@ -5,6 +5,7 @@ import connectDB from './config/mongodb.js'; // Add `.js` if using ES modules
 import connectCloudinary from './config/cloudinary.js';
 import adminRouter from './routes/adminRoute.js';
 import doctorRouter from './routes/doctorRoute.js';
+import userRouter from './routes/userRoute.js';
 // Connect to MongoDB
 
 
@@ -21,6 +22,7 @@ app.use(cors());
 //api endpoint
 app.use('/api/admin',adminRouter)
 app.use('/api/doctor',doctorRouter)
+app.use('/api/user',userRouter)
 //localhost:4000/api/admin
 
 // Routes
